@@ -6,7 +6,6 @@ from django.urls import reverse
 from .models import Post
 
 
-
 class BlogTests(TestCase):
     @classmethod
     def setUpTestData(cls):
