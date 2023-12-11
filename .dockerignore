@@ -1,0 +1,4 @@
+.git/
+*.sqlite3
+.env
+
