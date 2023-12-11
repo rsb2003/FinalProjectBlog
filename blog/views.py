@@ -40,3 +40,11 @@ def image_upload_view(request):
     else:
         form = ImageForm()
         return render(request, 'index.html', {'form': form})
+
+
+def display_images(request):
+    if request.method == 'GET':
+        # getting all the objects of car.
+        Cars = Car.objects.all()
+        return render((request, 'display_hotel_images.html',
+                       {'hotel_images': Hotels}))
