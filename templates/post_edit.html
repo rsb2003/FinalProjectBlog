@@ -3,9 +3,16 @@
 {% block content %}
 
 <h1>Edit post</h1>
-    <form action="" method="post">{% csrf_token %}
-    {{ form.as_p }}
+     <form method = "post" enctype="multipart/form-data">
+        {% csrf_token %}
     <input type="submit" value="Update">
+        {{ form.as_p }}
+     <button type="submit">Upload</button>
+    {% if img_obj %}  <h3>Successfully uploaded : {{img_obj.title}}</h3>
+    <img src="{{ img_obj.image.url}}" alt="connect" style="max-height:300px"
+      {% endif %}
+    <button type="submit">Upload</button>
     </form>
+
 
 {% endblock content %}
